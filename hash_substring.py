@@ -14,6 +14,7 @@ def read_input():
         with open(name, mode = "r") as f:
             patternInput = f.readline()
             textData = f.readline()
+            
     return (patternInput.rstrip(), textData.rstrip())
 
 def print_occurrences(output):
@@ -33,10 +34,10 @@ def get_occurrences(pattern, text):
     return man
 
 
-def get_hash(pattern)->int:
+def get_hash(pattern) -> int:
     global B,Q
-    res = 0
     patternLength = len(pattern)
+    res = 0
     for i in range(patternLength):
         res = (B*res+ord(pattern[i]))%Q
     return res
