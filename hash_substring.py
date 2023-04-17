@@ -35,10 +35,10 @@ def get_occurrences(pattern, text):
 
 def get_hash(pattern)->int:
     global B,Q
-    res =0
+    res = 0
     patternLength = len(pattern)
     for i in range(patternLength):
-        res =(B*res+ord(pattern[i]))%Q
+        res = (B*res+ord(pattern[i]))%Q
     return res
     
 if __name__ == '__main__':
