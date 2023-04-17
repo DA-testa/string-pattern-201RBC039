@@ -23,7 +23,7 @@ def print_occurrences(output):
 def get_occurrences(pattern, text):
     man =[]
     patternLn = len(pattern)
-    hash_pattern_res = get_hash(patternLn)
+    hash_pattern_res = get_hash(pattern)
     textLn = len(text)
     for j in range(0, textLn-patternLn+1):
         hash_text_res = get_hash(text[j:j+patternLn])
